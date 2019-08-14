@@ -1,4 +1,4 @@
-![logo](_media/icon.svg)
+![logo](media/hulk.jpg)
 
 # APM.Vue
 
