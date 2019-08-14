@@ -1,2 +1,2 @@
-* [Home](zh-cn/)
-* [Guide](zh-cn/guide)
+* [中文](zh-cn/)
+* [English](en/)
