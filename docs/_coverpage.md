@@ -9,4 +9,4 @@
 * easy to build and serve
 
 [GitHub](https://github.com/leonllzhang/APM.Thesis)
-[Get Started](#quick-start)
+[Get Started](#/zh-cn)
