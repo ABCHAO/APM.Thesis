@@ -48,5 +48,32 @@
 
 
 ### schemas
-## schema 的高级属性
-### script
+
+- 可选属性
+- 类型： Array
+
+如果schema 中存在嵌套结构，则子集以schema 形式存在于这个字段中。
+
+
+
+## schema 基于控件的扩展属性
+### required
+
+- 可选属性
+- 类型： Boolean
+
+输入型控件，可以配置是否必填
+
+### classes
+
+- 可选属性
+- 类型： String
+
+像layout 这样的控件，是支持可以自定义class 的，可以由这个属性传入
+
+### layout
+
+- 可选属性
+- 类型： String
+
+像layout 这样的控件，能够支持控件横向布局和纵向布局
