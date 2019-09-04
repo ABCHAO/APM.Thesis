@@ -4,7 +4,7 @@
 
 系统默认支持三种语言： 中文、英文和 繁体中文,可在application内多语言控件上切换
 
-![languageSwitch](../media/languageSwitch.jpg)
+![languageSwitch](../media/languageswitch.jpg)
 
 
 
@@ -55,3 +55,4 @@
 系统会自动识别设置，进行多语言翻译
 
 ![formtransalte](../media/formtransalte.jpg)
+

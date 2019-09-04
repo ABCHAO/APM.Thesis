@@ -20,7 +20,16 @@
       loadSidebar: true,
       loadNavbar: true,
       subMaxLevel: 2,
-      coverpage: true,     
+      coverpage: true,   
+      search: 'auto', // 默认值  
+      search : [
+      '/en/',
+      '/zh-cn/',           
+      '/zh-cn/controls',       
+      '/zh-cn/languages', 
+      '/zh-cn/Schema',    
+    ],
+
       search: {
         maxAge: 86400000, // 过期时间，单位毫秒，默认一天
         paths: [], // or 'auto'
@@ -29,7 +38,7 @@
         // 支持本地化
         placeholder: {
           '/zh-cn/': '搜索',
-          '/': 'Type to search'
+          '/en/': 'Type to search'
         },
 
         noData: 'No Results!',
