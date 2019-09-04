@@ -70,8 +70,45 @@
 
 ### Form Design
 
-- [ ] control design
+#### control design
+
+- [ ] layout
+- [ ] textbox
+- [ ] hidden
+- [ ] checkbox
+- [ ] radio
+- [ ] select
+- [ ] multiselect
+- [ ] textarea
+- [ ] label
+- [ ] like
+- [ ] share
+- [ ] favourite
+- [ ] views
+- [ ] fileupload
+- [ ] fileupload with preview
+- [ ] image
+- [ ] cascader
+- [ ] calendar
+- [ ] peoplepicker
+- [ ] data picker
+- [ ] tags
+- [ ] rate
+- [ ] rich text
+- [ ] verify
+- [ ] restrict reader
+- [ ] restrict editor
+- [ ] edit history
+- [ ] comments
+- [ ] html
+
+#### form 联动
+
 - [ ] easy to config show hide function
+- [ ] select 联动
+
+#### custom control
+
 - [ ] custom control design
 - [ ] custom control validation
 
