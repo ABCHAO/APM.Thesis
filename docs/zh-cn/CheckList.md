@@ -72,15 +72,15 @@
 
 #### control design
 
-- [ ] layout
-- [ ] textbox
+- [x] layout
+- [x] textbox
 - [ ] hidden
 - [ ] checkbox
 - [ ] radio
 - [ ] select
 - [ ] multiselect
 - [ ] textarea
-- [ ] label
+- [x] label
 - [ ] like
 - [ ] share
 - [ ] favourite
@@ -90,11 +90,11 @@
 - [ ] image
 - [ ] cascader
 - [ ] calendar
-- [ ] peoplepicker
-- [ ] data picker
+- [x] peoplepicker
+- [x] data picker
 - [ ] tags
 - [ ] rate
-- [ ] rich text
+- [x] rich text
 - [ ] verify
 - [ ] restrict reader
 - [ ] restrict editor
