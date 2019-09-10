@@ -123,12 +123,14 @@
 
 #### vc-chart
 
-| 属性名    | 子属性名 | 必备  | 类型   | 默认值 | 是否支持脚本 | 说明         |
-| --------- | -------- | ----- | ------ | ------ | ------------ | ------------ |
-| name      |          | true  | string |        |              |              |
-| chartType |          | true  | string |        |              | 图标类型     |
-| data      |          | false | json   |        |              |              |
-| colors    |          | false | array  |        |              | 设置颜色主题 |
+| 属性名        | 子属性名 | 必备  | 类型            | 默认值 | 是否支持脚本 | 说明               | 样例数据                                  |
+| ------------- | -------- | ----- | --------------- | ------ | ------------ | ------------------ | ----------------------------------------- |
+| name          |          | true  | string          |        |              |                    |                                           |
+| chartType     |          | true  | string          |        |              | 图标类型           |                                           |
+| data          |          | false | json            |        |              |                    |                                           |
+| colors        |          | false | array           |        |              | 设置颜色主题       |                                           |
+| chartSettings |          | false | object          |        |              | 图表全局选项设置   | {"symbol": "diamond"}                     |
+| chartExtends  |          | false | array of object |        |              | 图标特定列选项设置 | [{"symbol":"rect"},{"symbol":"triangle"}] |
 
 #### 
 
