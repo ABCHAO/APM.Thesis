@@ -33,30 +33,39 @@
       search: {
         maxAge: 86400000, // 过期时间，单位毫秒，默认一天
         paths: [], // or 'auto'
-        placeholder: 'Type to search',
 
         // 支持本地化
         placeholder: {
+          '/': '搜索',
           '/zh-cn/': '搜索',
           '/en/': 'Type to search'
         },
 
-        noData: 'No Results!',
-
         // 支持本地化
         noData: {
+          '/': '找不到结果',
           '/zh-cn/': '找不到结果',
           '/en/': 'No Results'
         },
 
         // 搜索标题的最大程级, 1 - 6
         depth: 2
-      }
+      },
+      alias: {
+      '/.*/_navbar.md': '/_navbar.md'
+    }
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
   <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-json.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/yremp/yremp-js@1.5/sakura.js"></script>
+  <script>
+    setTimeout(function () { 
+      staticx=true;
+      stopp();
+    }, 10000);
+  </script>
 </body>
 
 </html>

@@ -1,0 +1,32 @@
+{
+  "name": "apm.thesis",
+  "version": "1.0.1",
+  "description": "",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docsify": "docsify serve docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonllzhang/APM.Thesis.git"
+  },
+  "author": "leonllzhang",
+  "contributors": [
+    {
+      "name": "horan",
+      "email": "zhr85210078@163.com",
+      "url": "https://github.com/zhr85210078"
+    }
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leonllzhang/APM.Thesis/issues"
+  },
+  "homepage": "https://github.com/leonllzhang/APM.Thesis#readme",
+  "devDependencies": {
+    "docsify": "^4.9.4"
+  }
+}

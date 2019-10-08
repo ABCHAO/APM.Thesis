@@ -1,2 +1,2 @@
-* [Schema](en/Schema.md)
+* [Json Schema](en/Schema.md)
 * [MultiLanguage](en/languages.md)
