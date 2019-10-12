@@ -22,6 +22,102 @@
 
 
 ### 各组件详细说明
+## **vc-peoplepicker**
+#### 1、在页面中如何引用？
+##### 直接在schema中写入如下格式的，示例：
+```json
+{
+ //必填属性：
+ "name": "ClientPicker", 
+ "model": "ClientPicker", 
+ "component": "vc-peoplepicker",
+ //非必填属性：
+ "required":true, //默认false
+ "tooltip":true, //默认false
+ "setValue":["##190709102213221"],//暴露方法：传入staffCode设置已选
+ "isShowDefault":false, //是否将当前登录人作为已选||默认false
+ "onchange":"console.log(888)",//当选项改变的时候，就会执行
+ "inputBoxPrompt":"输入关键字搜索你想要的哇~",//对应弹窗里search-input的placeholder || Input key word here~
+ "title": "Picker",//对应弹窗上的picker名称 || People PickerPeople 
+ "maxSelectCount": "5",//设置可以选择的最大数量 || 默认没有上限
+},
+```
+#### 2、组件内部属性 & 暴露公共方法
+##### 组件内部属性
+| 属性名  | 描述 | 必填  |  类型  | 默认值 | 是否支持脚本 | 样例 |
+| :-----: | :------: | :---: | :----: | :----: | :----------: | :--: |
+|  required   |    是否必选      | false  | string |    false    |              |      |
+| tooltip |     浮窗提示文案     | false | string |        |              |    这是给XXX用的peoplepicker  |
+| setValue  |    设置默认已选项      | false | arr |    |              |    ["staffCode"]  |
+| onchange  |    选项变更执行的方法      | false | string |        |              |    console.log(888)  |
+| inputBoxPrompt  |   对应弹窗里search-input的placeholder       | false | string |     Input key word here~   |              |   Input key word here~   |
+| title  |   picker对应弹窗上的标题名称       | false | string |       People Picker |              |  People Picker    |
+| maxSelectCount  |   设置可以选择的最大数量       | false | string |   没有上限     |              |   5   |
+| isShowDefault  |   是否将当前登录人作为已选       | false | string |  false      |              |   true   |
+
+##### 组件暴露外部方法
+| 属性名  | 描述 | 必备  |  类型  | 默认值 | 是否支持脚本 | 样例 |
+| :-----: | :------: | :---: | :----: | :----: | :----------: | :--: |
+|  setValue   |   设置默认选项       | false  | string |        |              |   ["$raiseEvent","$raiseEvent(`peoplepickerName`,`setValue`,`setValue([staffCode])`)"]   |
+| onchange |   选项变更执行的方法       | false | string |        |              |     console.log(888) |
+
+#### 3、开发须知
+##### getData请求参数说明：
+```json
+{
+         Method: "all",   //返回数据参数：all , user , group
+        selectedDatas: selectedDatas || [], //已经选择的数据
+        IgnoreStaffs: IgnoreStaffs || [],//不需要返回的数据
+        queryContent: queryContent || "",//search的input输入
+        index: this.index,//页码
+        size: 5,//返回每页的数据个数
+        filters: [],//Field Filter --design
+        organizationCode: app.tenantId,//tenantId
+        appCode: app.appCode,//appCode
+        range: [],//Tenant -- design
+        showPrivateGroup: false,//是否返回我所在的私有组里面的所有人—design
+        searchByGroup: false,//通过group filter ---design
+        searchByRole: false,//通过role filter ---design
+        groupName: "",//通过group filter时，groupName ---design
+        roleName: "",//通过role filter时，roleName ---design
+        attribute1: "",//group的attribute1 --- design
+        attribute2: "","",//group的attribute2 --- design
+        attribute3: "","",//group的attribute3 --- design
+        currentStaffCode: currentUserData.staffId,//当前登陆人的staffId
+        firstLineDesc: [],//返回的第一行数据显示—design
+        firstLineSeparator: "",[],//返回的第一行数据显示分隔符--design
+        secondLineDesc: [],[],//返回的第2行数据显示--design
+        secondLineSeparator: "",[],//返回的第2行数据显示分隔符--design
+        thirdLineDesc: [],[],//返回的第3行数据显示--design
+        thirdLineSeparator: "",[],//返回的第3行数据显示分隔符--design
+        additionalSearchKey: [],//配置搜索字段，原来的字段（staffname,staffcode,email）会被干掉--design
+        withExtendData: false,//是否返回user的全部数据
+        relationskey: "StaffCode,StaffName,Email,OrganizationCode,UserID",//用户需要前端保存的数据，就是真正保存到数据库里的数据
+        showTermUser: false // 是否显示离职人员
+
+},
+```
+##### getData 常见返回数据说明：
+```json
+{
+ ActiveFlag：true  //true—未离职  false—已离职
+AvatarUrl :    // user对应的avatar图片url  ,  group没有图片，使用默认图
+Count ： 5  //返回的数据个数
+Email : 
+FirstLineDesc
+OrganizationCode
+Phone
+SecondLineDesc
+StaffCode //staffId
+ThirdLineDesc
+Type:1 – user    2—group
+UserId
+UserName: // staffName
+UserInfos:{} 更加详细的个人信息
+},
+```
+
+
 
 #### vc-layout
 
