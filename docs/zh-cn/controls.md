@@ -265,13 +265,13 @@
 
 #### vc-form
 
-| 属性名  | 子属性名 | 必备  | 类型   | 默认值 | 是否支持脚本 | 样例 |
-| ------- | -------- | ----- | ------ | ------ | ------------ | ---- |
-| name    |          | true  | string |        |              |      |
-| classes |          | false | string |        |              |      |
-|         |          |       |        |        |              |      |
-|         |          |       |        |        |              |      |
-
+| 属性名  | 子属性名 | 必备  | 类型   | 默认值 | 是否支持脚本 | 样例   |
+| ------- | -------- | ----- | ------ | ------ | ------------ | ------ |
+| name    |          | true  | string |        |              |        |
+| classes |          | false | string |        |              |        |
+| method  |          | false | string |        |              | get    |
+| action  |          | false | string |        |              | /form  |
+| target  |          | false | string |        |              | _blank |
 #### 
 
 #### vc-label
@@ -410,12 +410,22 @@
 
 #### vc-select
 
-| 属性名 | 子属性名 | 必备 | 类型   | 默认值 | 是否支持脚本 | 样例 |
-| ------ | -------- | ---- | ------ | ------ | ------------ | ---- |
-| name   |          | true | string |        |              |      |
-| model  |          | true | string |        |              |      |
-|        |          |      |        |        |              |      |
-|        |          |      |        |        |              |      |
+| 属性名        | 子属性名 | 必备  | 类型    | 默认值 | 是否支持脚本 | 样例 |
+| ------------- | -------- | ----- | ------- | ------ | ------------ | ---- |
+| name          |          | true  | string  |        |              |      |
+| model         |          | true  | string  |        |              |      |
+| classes       |          | false | string  |        |              |      |
+| isVertical    |          | false | boolean | false  |              |      |
+| disabled      |          | false | boolean | false  |              |      |
+| required      |          | false | boolean | false  |              |      |
+| queryId       |          | false | string  |        |              |      |
+| query         |          | false | string  |        |              |      |
+| multiple      |          | false | boolean | false  |              |      |
+| selectOptions |          | false | array   |        |              |      |
+| itemText      |          | false | string  |        |              |      |
+| itemValue     |          | false | string  |        |              |      |
+| isSolo        |          | false | boolean |        |              |      |
+| disableLabel  |          | false | boolean |        |              |      |
 
 #### 
 
@@ -485,12 +495,15 @@
 
 #### vc-template
 
-| 属性名 | 子属性名 | 必备 | 类型   | 默认值 | 是否支持脚本 | 样例 |
-| ------ | -------- | ---- | ------ | ------ | ------------ | ---- |
-| name   |          | true | string |        |              |      |
-|        |          |      |        |        |              |      |
-|        |          |      |        |        |              |      |
-|        |          |      |        |        |              |      |
+| 属性名   | 子属性名 | 必备  | 类型   | 默认值 | 是否支持脚本 | 样例 |
+| -------- | -------- | ----- | ------ | ------ | ------------ | ---- |
+| name     |          | true  | string |        |              |      |
+| template |          | true  | object |        |              |      |
+|          | created  | false | string |        | true         |      |
+|          | methods  | false | object |        | true         |      |
+|          | data     | false | object |        |              |      |
+|          | template | true  | string |        |              |      |
+|          | type     | false | string |        |              |      |
 
 #### 
 
@@ -510,12 +523,19 @@
 
 #### vc-textbox
 
-| 属性名 | 子属性名 | 必备 | 类型   | 默认值 | 是否支持脚本 | 样例 |
-| ------ | -------- | ---- | ------ | ------ | ------------ | ---- |
-| name   |          | true | string |        |              |      |
-|        |          |      |        |        |              |      |
-|        |          |      |        |        |              |      |
-|        |          |      |        |        |              |      |
+| 属性名        | 子属性名 | 必备  | 类型    | 默认值 | 是否支持脚本 | 样例 |
+| ------------  | -------- | ----- | ------- | ------ | ------------ | ---- |
+| name          |          | true  | string  |        |              |      |
+| model         |          | true  | string  |        |              |      |
+| classes       |          | false | string  |        |              |      |
+| isVertical    |          | false | boolean | false  |              |      |
+| disabled      |          | false | boolean | false  |              |      |
+| required      |          | false | boolean | false  |              |      |
+| inputType     |          | false | string  | text   |              |      |
+| preinicon     |          | false | string  |        |              |      |
+| isSolo        |          | false | boolean |        |              |      |
+| disableLabel  |          | false | boolean |        |              |      |
+| preinicon     |          | false | string  |        |              |      |
 
 #### 
 
