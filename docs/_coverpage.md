@@ -9,4 +9,6 @@
 * easy to build and serve
 
 [GitHub](https://github.com/leonllzhang/APM.Thesis)
-[Get Started](/zh-cn/Schema)
+[Get Started](/zh-cn/README)
+
+![color](#ffffff)

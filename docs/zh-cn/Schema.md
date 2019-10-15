@@ -1,5 +1,5 @@
-# schema 
-## schema 样例
+# Json Schema 
+## Json Schema  样例
 
 ```json
 [{
@@ -13,7 +13,7 @@
 
 
 
-## schema 的基础属性
+## Json Schema  的基础属性
 ### name  
 
 - **必须属性**
@@ -56,7 +56,7 @@
 
 
 
-## schema 基于控件的扩展属性
+## Json Schema  基于控件的扩展属性
 ### required
 
 - 可选属性
