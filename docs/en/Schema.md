@@ -55,6 +55,45 @@ Type: String
 
 Used as fallback label when locale setting 
 
+## Example
+
+```
+[{
+    "name": "toolbar",
+    "model": "toolbarObj",
+    "component": "vc-toolbar",
+    "ins": 1,
+    "class": "tool-box",
+    "multiLanguage": {
+      "name": "multilanguage",
+      "component": "vc-multilanguage",
+      "defaultLanguage": "zh"
+    }
+  },
+  {
+    "component": "vc-layout",
+    "classes": "container justify-center",
+    "items": [{
+      "schemas": [{
+        "component": "vc-form", 
+        "schemas": [{
+          "name": "state",
+          "component": "vc-stepper",
+          "model": "state",
+          "query": {
+            "type": "list",
+            "id": "OpportunityStatus"
+          }
+        }]
+      }]
+    }]
+  }
+]
+
+```
+
+
+
 # Function
 
 The function provides ways to run JavaScript code snippets on various occasions during the VUE component instance lifecycle . By default, schema and model objects will be passed to the constructed function.
