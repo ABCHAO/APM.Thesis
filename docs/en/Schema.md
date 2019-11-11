@@ -1,4 +1,4 @@
-# Schema
+# Schema-base
 
 ## Properties
 
@@ -55,6 +55,80 @@ Type: String
 
 Used as fallback label when locale setting 
 
+# Query-base
+
+### query
+
+#### list - a.k.a SystemDataSources
+
+```json
+{
+	"type":"list",
+    "id":"SubTopic",
+    "queryKey":"Topic"
+}
+```
+
+id: need to case-sensitively match the "Name" fields in SystemDataSources
+
+queryKey:  need to case-sensitively match the "Name" field in the fields setting in SystemPageSettings. 
+
+
+
+#### form - a.k.a SystemQuerySettings
+
+```json
+{
+    "type": "form",
+    "id": "response",
+    "searchValues":{
+        "searchId":"_id"
+    }
+}
+```
+
+id: need to case-sensitively match the "Code" fields in SystemQuerySettings,
+
+searchValues: see the example below
+
+```json
+[{"Name":"CentralisedConsultationSystemId","Value":"@@searchValue","Operator":"Equal","Method":"And"}] 
+```
+
+This is a Filter setting in SystemQuerySettings, which defines a variable "id". Accordingly, the searchValues will be 
+
+```json
+{
+	"searchValue":"source"
+}
+```
+
+when the model is something like
+
+```json
+{
+    "source": "8fa371c4-8c3f-400c-aa23-aa5d342f7f2f"
+}
+```
+
+the searchValue will be assemble as
+
+```json
+{
+	"searchValue": "8fa371c4-8c3f-400c-aa23-aa5d342f7f2f"
+}
+```
+
+In the back end, the query will be
+
+```json
+{
+	"CentralisedConsultationSystemId": "8fa371c4-8c3f-400c-aa23-aa5d342f7f2f"
+}
+```
+
+
+
 ## Example
 
 ```
@@ -92,7 +166,7 @@ Used as fallback label when locale setting
 
 ```
 
-
+## 
 
 # Function
 
