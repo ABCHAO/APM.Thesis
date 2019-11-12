@@ -1,4 +1,4 @@
-# Schema-base
+# default
 
 ## Properties
 
@@ -43,19 +43,51 @@ Type: Function
 
 If available, called synchronously on VUE instance created hooks.
 
-### required
-
-Type: Boolean
-
-Determine if a control shall be validate on form submission.
-
 ### label
 
 Type: String
 
 Used as fallback label when locale setting 
 
-# Query-base
+### direction
+
+Type: String
+
+Used for determining the layout of control
+
+### tooltipName
+
+Type: String
+
+Used for tooltip displaying
+
+### show
+
+Type: Boolean
+
+Deterimine if to render control 
+
+
+
+# form
+
+### required
+
+Type: Boolean
+
+Determine if a control shall be validate on form submission.
+
+### mode
+
+Type: String
+
+option: readonly
+
+Determine if a control to be editable
+
+
+
+# query
 
 ### query
 
@@ -127,6 +159,18 @@ In the back end, the query will be
 }
 ```
 
+### beforeQuery
+
+Type: Function
+
+Run before query request being called
+
+### afterQuery
+
+Type: Function
+
+Run after query response recevied and data been assigned to queryResult
+
 
 
 ## Example
@@ -166,7 +210,7 @@ In the back end, the query will be
 
 ```
 
-## 
+##
 
 # Function
 
