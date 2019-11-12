@@ -18,6 +18,32 @@ Type: form, query
 }
 ```
 
+### itemText
+
+Type: String
+
+Default: value
+
+Determine which field to be used for displaying
+
+### itemValue
+
+Type: String
+
+Default: value
+
+Determine which field to be used for filling model
+
+### Multiple
+
+Type: Boolean
+
+Default: false
+
+Determine if mulitple value can be selected
+
+
+
 ## vc-textbox
 
 Type:  form
@@ -138,7 +164,7 @@ Type: String
 - unique
 - case-insensitive
 
-This field has to be identical with the name of the form.
+This field has to be identical with the name of the form. This setting will also override its child controls.
 
 ## vc-layout
 
@@ -320,4 +346,80 @@ button type
 Type: Function
 
 Determine the condition of the button displaying, must return value.
+
+## Customized control
+
+### Type
+
+Type: String, Array
+
+Option: form, query,
+
+### Control
+
+Type: Object
+
+Native VUE component object
+
+```javascript
+{
+    template: '<button :class="bg" @click.stop="getClasses(i, items[0])">{{current}}</button>',
+    props: {
+      items: {
+        type: Array,
+        required: true
+      },
+      current: Object
+    },
+    computed: {
+      bg: function () {
+        return "color-" + this.items.indexOf(this.current);
+      }
+    },
+    methods: {
+      getClasses: function (i, item) {
+        var ccs = {};
+        ccs["color-" + i] = 1;
+        ccs["active"] = item === this.current;
+        return ccs;
+      }
+    }
+  }
+```
+
+### name
+
+Type: String
+
+- Required
+- Unique
+
+### example
+
+tenant-app.js
+
+```javascript
+var ctls = (window.customizedControls = window.customizedControls || []);
+var control = {
+	name:"button-control-1",
+	control:{
+		template: "", //...
+	},
+    type: ["form", "query"]
+}
+ctls.push(control);
+```
+
+schema
+
+```json
+{
+	"component":"button-group-1",
+    "name":"button-group-1-name",
+    "query":{
+        "id":"query-id",
+        "type":"list"
+    }
+}
+```
 

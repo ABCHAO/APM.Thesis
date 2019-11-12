@@ -1,6 +1,8 @@
 # default
 
-## Properties
+## Schema Properties
+
+Schema properties may be set in schema
 
 ### name
 
@@ -67,9 +69,47 @@ Type: Boolean
 
 Deterimine if to render control 
 
+## Properties
+
+These properties can be accessed in template
+
+### pageView
+
+Type: String
+
+- ReadOnly
+
+Current pageView name, can be overrided by vc-form.
+
+### isNew
+
+Type: Boolean
+
+- ReadOnly
+
+Determine if the current page is in add mode.
+
+### isVertical
+
+Type: Boolean
+
+Default: true
+
+- ReadOnly
+
+Determine if the control layout is vertical
+
+### permission
+
+Type: Boolean
+
+read/white to the property "show"
+
 
 
 # form
+
+## Schema Properties
 
 ### required
 
@@ -85,7 +125,19 @@ option: readonly
 
 Determine if a control to be editable
 
+## Properties
 
+### isEdit
+
+Type: Boolean
+
+- RealOnly
+
+Determine if the control is editable.
+
+### value
+
+Read/write to the property defined in schema property "model"
 
 # query
 
