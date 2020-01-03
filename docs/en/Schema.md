@@ -153,9 +153,15 @@ Read/write to the property defined in schema property "model"
 }
 ```
 
-id: need to case-sensitively match the "Name" fields in SystemDataSources
+##### id
 
-queryKey:  need to case-sensitively match the "Name" field in the fields setting in SystemPageSettings. 
+Type: string
+
+Need to case-sensitively match the "Name" fields in SystemDataSources. Query will not be performed if id is not available. This can be useful when data comes form parent control.
+
+##### queryKey
+
+QueryKey is used for filtering a list in some cases. The value is the name of a field of the model object. The control will observe the field and perform query on change.
 
 
 
@@ -176,14 +182,14 @@ id: need to case-sensitively match the "Code" fields in SystemQuerySettings,
 searchValues: see the example below
 
 ```json
-[{"Name":"CentralisedConsultationSystemId","Value":"@@searchValue","Operator":"Equal","Method":"And"}] 
+[{"Name":"CentralisedConsultationSystemId","Value":"@@searchId","Operator":"Equal","Method":"And"}] 
 ```
 
 This is a Filter setting in SystemQuerySettings, which defines a variable "id". Accordingly, the searchValues will be 
 
 ```json
 {
-	"searchValue":"source"
+	"searchId":"source"
 }
 ```
 
@@ -195,11 +201,11 @@ when the model is something like
 }
 ```
 
-the searchValue will be assemble as
+the searchId will be assemble as
 
 ```json
 {
-	"searchValue": "8fa371c4-8c3f-400c-aa23-aa5d342f7f2f"
+	"searchId": "8fa371c4-8c3f-400c-aa23-aa5d342f7f2f"
 }
 ```
 
@@ -221,7 +227,7 @@ Run before query request being called
 
 Type: Function
 
-Run after query response recevied and data been assigned to queryResult
+Run after query response recevied and data been assigned to queryResult.
 
 
 

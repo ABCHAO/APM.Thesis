@@ -144,6 +144,14 @@ Type: form
 }
 ```
 
+#### mode
+
+Type: Stirng
+
+options: date, time, datetime
+
+default: datetime
+
 ## vc-form
 
 Type: default
@@ -353,7 +361,7 @@ Determine the condition of the button displaying, must return value.
 
 Type: String, Array
 
-Option: form, query,
+Option: form, query, search
 
 ### Control
 
@@ -421,5 +429,25 @@ schema
         "type":"list"
     }
 }
+```
+
+### Caveat
+
+Due to the compactiblity issue with IE11, all syntax of ES6 cannot be used in customized control. This also includes the expression in template.
+
+##### ES6 syntax
+
+```html
+<div v-slot:header="{item}">
+    {{`${item.firstName}, ${item.lastName}`}}
+</div>
+```
+
+##### ES5 Syntax
+
+```html
+<div v-slot:header="soltProps">
+    {{soltProps.item.firstName}}, {{soltProps.item.lastName}}
+</div>
 ```
 
