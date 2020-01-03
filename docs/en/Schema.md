@@ -189,7 +189,7 @@ This is a Filter setting in SystemQuerySettings, which defines a variable "id". 
 
 ```json
 {
-	"searchId":"source"
+	"searchId":"_id"
 }
 ```
 
@@ -197,7 +197,7 @@ when the model is something like
 
 ```json
 {
-    "source": "8fa371c4-8c3f-400c-aa23-aa5d342f7f2f"
+    "_id": "8fa371c4-8c3f-400c-aa23-aa5d342f7f2f"
 }
 ```
 
